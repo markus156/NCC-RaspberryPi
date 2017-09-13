@@ -1,5 +1,5 @@
 # NCC-RaspberryPi
-==================
+-------------------
 ## Idea
 For our clusterprojekt we want to have a server, which controlls the whole cluster.
 
