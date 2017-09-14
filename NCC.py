@@ -18,6 +18,9 @@ def createSocket():
 	sock.listen(5)
 	return sock
 
+#********************************************************************************************************
+#This is the Main Programloop
+#********************************************************************************************************
 def main():
 	sock = createSocket()
 	sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # damit man den Socketerroe 98 nicht bekommt
@@ -25,7 +28,7 @@ def main():
 	CreateConectionHandler = SocketHandler.WaitOnConnection(sock,status)
 	CreateConectionHandler.start()
 
-
+	#This will run vorever
 	while True:
 		pass
 
