@@ -1,7 +1,7 @@
 # NCC-RaspberryPi
 -------------------
 ## Idea
-For our clusterprojekt we want to have a server, which controls the whole cluster.
+For our cluster we want to have a server, which controls the whole cluster.
 
 The server should manager the following things:
 * It should reboot and restart the clients
