@@ -2,12 +2,13 @@ import socket
 import sys
 import time
 from threading import Thread
+from MySqlHandlerAPI import MySql
 
 
 
 gotData = []
 
-#Here, dte connected Clients get saved
+#Here, the connected Clients get saved
 conClients = []
 
 #*********************************************************************************************************
@@ -74,4 +75,5 @@ def main():
 		time.sleep(10)
 
 if __name__ == "__main__":
-	main()
+	#main()
+	MySql.GetDataset()
