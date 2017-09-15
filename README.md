@@ -1,5 +1,9 @@
 # NCC-RaspberryPi
 -------------------
+##  Collaborators information
+This is some sort of Starterprojekt in Python.
+Nether of us has more than 20 houres of experience in programming with python.
+-------------------
 ## Idea
 For our cluster we want to have a server, which controls the whole cluster.
 
