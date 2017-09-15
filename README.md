@@ -1,6 +1,6 @@
 # NCC-RaspberryPi
 -------------------
-##  Collaborators information
+##  Collaborators information  
 This is some sort of Starterprojekt in Python.
 Nether of us has more than 20 houres of experience in programming with python.
 -------------------
