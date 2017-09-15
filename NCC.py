@@ -11,9 +11,9 @@ import SocketHandlerAPI as SocketHandler
 #********************************************************************************************************
 #Here, the socketobjekt gets created
 #********************************************************************************************************
-def createSocket():
+def createSocket(adresse):
 	sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-	sock.bind(('127.0.0.1',80))
+	sock.bind((adresse,80))
 #	sock.bind((socket.gethostname(),80))
 
 	sock.listen(5)
@@ -23,10 +23,11 @@ def createSocket():
 #This is the Main Programloop
 #********************************************************************************************************
 def main():
-	sock = createSocket()
+	
+	sock = createSocket("127.0.0.1")
 	sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # damit man den Socketerroe 98 nicht bekommt
 
-	CreateConectionHandler = SocketHandler.WaitOnConnection(sock,status)
+	CreateConectionHandler = SocketHandler.WaitOnConnection(sock)
 	CreateConectionHandler.start()
 
 
