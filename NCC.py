@@ -1,10 +1,12 @@
+#Pythonimports
 import socket
 import sys
 import time
 from threading import Thread
+
+#Selfimports
 from MySqlHandlerAPI import MySql
 import SocketHandlerAPI as SocketHandler
-
 
 
 
@@ -41,5 +43,6 @@ if __name__ == "__main__":
 	#MySql.GetDataset()
 	except KeyboardInterrupt:
 		quit()
-
+	#Because of an endless running thread this code does not work
+	#a fix will be comming soon
 
