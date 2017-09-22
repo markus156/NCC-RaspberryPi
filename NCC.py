@@ -7,8 +7,10 @@ from threading import Thread
 #Selfimports
 from MySqlHandlerAPI import MySql
 import SocketHandlerAPI as SocketHandler
+from pydispatch import dispatcher
 
-
+ThreadSignal= "Resend Clients"
+ThreadSender= "Thread"
 
 #********************************************************************************************************
 #Here, the socketobjekt gets created
@@ -18,7 +20,7 @@ def createSocket(adresse):
 	sock.bind((adresse,80))
 #	sock.bind((socket.gethostname(),80))
 
-	sock.listen(5)
+	sock.listen(5) 	#
 	return sock
 
 #********************************************************************************************************
@@ -35,14 +37,15 @@ def main():
 
 	#This will run vorever
 	while True:
-		pass
+		connections = SocketHandler.getConnected()
+
+		for x in connections:
+			print("Client %s: %s"%(connections.index(x),str(x)))
+
+		time.sleep(10)
+
+	
 
 if __name__ == "__main__":
-	try:
-		main()
-	#MySql.GetDataset()
-	except KeyboardInterrupt:
-		quit()
-	#Because of an endless running thread this code does not work
-	#a fix will be comming soon
-
+	
+	main()
