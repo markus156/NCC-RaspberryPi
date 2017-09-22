@@ -41,7 +41,7 @@ class Konfig():
 
 	#Here, the configfile is being read and the values are later used to connect to the database
 	@staticmethod
-	def get(Filename="MySql.config"):
+	def get(Filename="MySql.json"):
 		file = open(Filename).read()
 
 		data = json.loads(file)
@@ -53,7 +53,7 @@ class Konfig():
 
 	#If the file is not there jet, it will be created
 	@staticmethod
-	def write(Filename="MySql.config"):
+	def write(Filename="MySql.json"):
 		file = open(Filename,'w')
 
 		jsonstr = {"Database":{"Username":'[put here]',
